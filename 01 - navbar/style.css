@@ -1,0 +1,142 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   background-color: #a7dbab;
+   font-family: 'Roboto', sans-serif;
+}
+
+li, a {
+   font-weight: 500;
+   font-size: 16px;
+   color: #25857d;
+   text-decoration: none;
+}
+
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 30px 7%;
+}
+
+.logo {
+   cursor: pointer;
+}
+
+.nav-links {
+   list-style: none;
+}
+
+.nav-links li {
+   display: inline-block;
+}
+
+.nav-links li a {
+   transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover{
+   color: #512b52;
+}
+
+
+li a {
+   font-size: 30px;
+   margin-left: 20px;
+}
+
+.container {
+   display: flex;
+   border: 3px solid pink;
+   justify-content: center;  
+}
+
+.principal {
+   border: 2px solid black;
+   margin-top: 50px;
+   display: flex;
+   justify-content: space-around;
+   width: 1400px;
+   margin-bottom: 50px;
+   flex-wrap: wrap;
+}
+
+.item1 {
+   width: 500px;
+   height: auto;
+   border: 1px solid red;
+}
+
+.texto {
+   width: 500px;
+   height: auto;
+   font-family: 'Roboto', sans-serif;
+   display: block;
+   color: #512b52;
+   padding-top: 20px;
+   border: 1px solid red;
+}
+
+h1 {
+   text-align: center;
+}
+
+.biografia {
+   padding: 25px;
+   font-size: 25px;
+   text-align: justify;
+}
+
+.video-title {
+   text-align: center;
+   font-size: 30px;
+   color: #512b52;
+}
+
+.videos {
+   width: 1400px;
+   display: flex;
+   height: auto;
+   border: 1px solid blueviolet;
+   justify-content: space-around;
+   padding-top: 10px;
+   padding-bottom: 50px;
+   flex-wrap: wrap;
+}
+
+#love {
+   margin-top: 30px;
+}
+
+#tender {
+   margin-top: 30px;
+}
+
+
+.scrollbutton {
+   width: 30px;
+   height: 30px;
+   border-radius: 15px;
+   background-color: #512b52;
+   position: fixed;
+   right: 15px;
+   bottom: 15px;
+   cursor: pointer;
+   display: none;
+}
+
+@media (max-width: 880px) {
+   
+   .item1 img {
+      width: 420px;
+      padding-left: 45px;
+   }
+   
+   .biografia {
+      font-size: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+   }
+
+}

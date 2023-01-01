@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Navbar</title>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+
+   <script src="index.js" defer></script>
+</head>
+
+<body>
+   <header>
+      <img src="svlogo.png" class="logo" alt="logo">
+      <nav>
+         <ul class="nav-links">
+            <li><a href="#">Início</a></li>
+            <li><a href="#videos">Vídeos</a></li>
+            <li><a href="#">Discografia</a></li>
+         </ul>
+      </nav>
+   </header>
+   <div class="container">
+      <div class="principal">
+         <div class="item1"><img src="Sv2.jpg" alt="Steve Vai" class="img-steve"></div>
+         <div  class="texto">
+            <h1>Steve Vai</h1><br>
+            <p class="biografia">Considerado por muitos o melhor guitarrista de todos os tempos. Steve Vai nasceu no dia 6 de junho de 1960 em Long Island, no estado americano de Nova Iorque. Começou a ter aulas de guitarra com 12 anos de idade e seu primeiro professor foi ninguém menos que Joe Satriani. Alguns anos depois, o guitarrista seguiria os mesmos passos de seu mestre, formando-se na famosa Berklee School Of Music. É referencia e inspiração para todos os entusiastas de guitarra ao redor do mundo.
+           </p>
+         </div>
+      </div>
+   </div>
+   <h2 class="video-title">Vídeos:</h2>
+   <div class="container">
+      <div class="videos" id="videos">
+         <iframe id="tender" width="560" height="315" src="https://www.youtube.com/embed/Yw74sDWPH7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <iframe id="love" width="560" height="315" src="https://www.youtube.com/embed/mDZuNM3HmU4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+   </div>
+
+   <div onclick="subirTela()" class="scrollbutton"></div>
+</body>
+</html>
