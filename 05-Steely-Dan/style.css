@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Nunito Sans', sans-serif;
 }
@@ -30,14 +34,16 @@ body {
 }
 
 .header ul li {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  font-weight: 700;
   padding: 1rem;
 }
 
 .header ul li a {
   text-decoration: none;
   color: #918a7a;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .header ul li a::after {
@@ -56,7 +62,8 @@ body {
 
 .logo {
   font-family: 'Kaushan Script', cursive;
-  font-size: 3.8rem;
+  font-size: 4rem;
+  font-weight: 700;
   color: #6f7799;
 }
 
@@ -67,8 +74,8 @@ body {
 }
 
 .bio {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 160px;
+  padding-bottom: 160px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,18 +90,55 @@ body {
   width: 100%;
   border-radius: 5px;
   box-shadow: 2px 2px 8px #615e52;
+  animation: show-right .8s forwards;
 }
 
 .bio-text {
   max-width: 36ch;
   font-size: 1.5rem;
   color: #58554a;
+  animation: show-left .8s forwards;
+}
+
+@keyframes show-left {
+  from {
+    opacity: 0;
+    transform: translate3d(40px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes show-right {
+  from {
+    opacity: 0;
+    transform: translate3d(-40px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 /* Music */
 
 .music-bg {
   background: #F4F0E5;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding-top: 80px;
+  padding-bottom: 160px;
+}
+
+.music-bg h2 {
+  text-align: center;
+  font-family: 'Kaushan Script';
+  font-size: 3rem;
+  color: #918a7a;
+  letter-spacing: 4px;
 }
 
 .music {
@@ -104,8 +148,6 @@ body {
   align-items: flex-end;
   justify-content: center;
   gap: 60px;
-  padding-top: 120px;
-  padding-bottom: 120px;
   flex-wrap: wrap;
 }
 
@@ -118,6 +160,7 @@ body {
 .music img {
   width: 260px;
   border-radius: 5px;
+  box-shadow: 2px 2px 6px #918a7a;
 }
 
 .music h3 {
@@ -136,4 +179,69 @@ audio {
   width: 260px;
   height: 30px;
   margin-top: 12px;
+}
+
+/* Videos */
+
+.videos-bg {
+  background: #fffdf6;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  padding-bottom: 160px;
+  gap: 60px;
+}
+
+#videos {
+  text-align: center;
+  font-family: 'Kaushan Script';
+  font-size: 3rem;
+  color: #918a7a;
+  letter-spacing: 4px;
+}
+
+.videos {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.video-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-item img {
+  width: 380px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 4px 4px 6px #918a7a;
+}
+
+.video-item a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #525a7a;
+  font-weight: 700;
+}
+
+.video-item span {
+  width: 26px;
+  height: 18px;
+}
+
+.video-item span img {
+  width: 100%;
+  padding-top: 7px;
+  box-shadow: none;
+}
+
+.video-link {
+  padding-top: 8px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
 }
