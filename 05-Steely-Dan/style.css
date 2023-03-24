@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Header */
+
+.header-bg {
+  background-color: #F4F0E5;
+}
+
+.header {
+  max-width: 1300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.header ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.header ul li {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.header ul li a {
+  text-decoration: none;
+  color: #918a7a;
+}
+
+.header ul li a::after {
+  display: block;
+  content: '';
+  height: 4px;
+  width: 0%;
+  margin: 0 auto;
+  background-color: #918a7a;
+  transition: 0.4s;
+}
+
+.header ul li a:hover::after {
+  width: 80%;
+}
+
+.logo {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 3.2rem;
+  color: #6f7799;
+}
+
+/* Biografia */
+
+.bio-bg {
+  background: #fffdf6;
+}
+
+.bio {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.bio-img {
+  width: 420px;
+}
+
+.bio-img img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px #615e52;
+}
+
+.bio-text {
+  max-width: 36ch;
+  font-size: 1.5rem;
+  color: #58554a;
+}
+
+/* Music */
+
+.music-bg {
+  background: #F4F0E5;
+}
+
+.music {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 60px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  flex-wrap: wrap;
+}
+
+.album-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+ 
+.music img {
+  width: 260px;
+  border-radius: 5px;
+}
+
+.music h3 {
+  max-width: 20ch;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  color: #525a7a;
+  padding-bottom: 10px;
+}
+
+audio {
+  border: 1px solid #afaa93;
+  width: 260px;
+  height: 30px;
+  margin-top: 12px;
+}
