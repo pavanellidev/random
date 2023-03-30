@@ -67,6 +67,39 @@ body {
   color: #6f7799;
 }
 
+@media (max-width:1300px) {
+  .header {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width:950px) {
+  .header ul {
+    gap: 12px;
+  }
+  .header ul li a {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width:800px) {
+  .header {
+    flex-direction: column;
+  }
+}
+
+@media (max-width:520px) {
+  .header ul li {
+    padding: .5rem;
+  }
+  .header ul li a {
+    font-size: 1.2rem;
+  }
+  .logo {
+    font-size: 3.6rem;
+  }
+}
+
 /* Biografia */
 
 .bio-bg {
@@ -84,6 +117,7 @@ body {
 
 .bio-img {
   width: 420px;
+  padding-left: 10px;
 }
 
 .bio-img img {
@@ -95,7 +129,7 @@ body {
 
 .bio-text {
   max-width: 36ch;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #58554a;
   animation: show-left 1s forwards;
 }
@@ -121,6 +155,43 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
+
+@media (max-width:965px) {
+  .bio-img {
+    width: 360px;
+  }
+  .bio-text {
+    font-size: 1.2rem;
+    max-width: 32ch;
+  }
+}
+
+@media (max-width:800px) {
+  .bio {
+    flex-direction: column;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .bio-text {
+    font-size: 1.3rem;
+    max-width: 40ch;
+  }
+}
+
+@media (max-width:520px) {
+  .bio-text {
+    font-size: 1.140rem;
+    text-align: center;
+  }
+}
+
+@media (max-width:440px) {
+  .bio-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
 
 /* Music */
 
@@ -181,6 +252,29 @@ audio {
   margin-top: 12px;
 }
 
+@media (max-width:800px) {
+  .music-bg {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+  .music img {
+    width: 220px;
+  }
+  audio {
+    width: 220px;
+  }
+  .music h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width:480px) {
+  .music {
+    gap: 40px;
+  }
+}
+
+
 /* Videos */
 
 .videos-bg {
@@ -205,7 +299,7 @@ audio {
   margin: 0 auto;
   display: flex;
   gap: 60px;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -246,6 +340,25 @@ audio {
   justify-content: center;
 }
 
+@media (max-width:800px) {
+  .videos-bg {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width:450px) {
+  .video-item img {
+    width: 330px;
+  }
+  .video-item a {
+    font-size: 1.3rem;
+  }
+  .videos {
+    gap: 40px;
+  }
+}
+
 /* Fotos */
 
 .fotos-bg {
@@ -263,4 +376,11 @@ audio {
   font-size: 3rem;
   color: #918a7a;
   letter-spacing: 4px;
+}
+
+@media (max-width:800px) {
+  .fotos-bg {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
 }
