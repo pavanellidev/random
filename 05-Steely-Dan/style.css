@@ -90,20 +90,20 @@ body {
   width: 100%;
   border-radius: 5px;
   box-shadow: 2px 2px 8px #615e52;
-  animation: show-right .8s forwards;
+  animation: show-right 1s forwards;
 }
 
 .bio-text {
   max-width: 36ch;
   font-size: 1.5rem;
   color: #58554a;
-  animation: show-left .8s forwards;
+  animation: show-left 1s forwards;
 }
 
 @keyframes show-left {
   from {
     opacity: 0;
-    transform: translate3d(40px, 0, 0);
+    transform: translate3d(60px, 0, 0);
   }
   to {
     opacity: 1;
@@ -114,7 +114,7 @@ body {
 @keyframes show-right {
   from {
     opacity: 0;
-    transform: translate3d(-40px, 0, 0);
+    transform: translate3d(-60px, 0, 0);
   }
   to {
     opacity: 1;
@@ -244,4 +244,23 @@ audio {
   display: flex;
   gap: 14px;
   justify-content: center;
+}
+
+/* Fotos */
+
+.fotos-bg {
+  background: #F4F0E5;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding-top: 80px;
+  padding-bottom: 160px;
+}
+
+.fotos-bg h2 {
+  text-align: center;
+  font-family: 'Kaushan Script';
+  font-size: 3rem;
+  color: #918a7a;
+  letter-spacing: 4px;
 }
