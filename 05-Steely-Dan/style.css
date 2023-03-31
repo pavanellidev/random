@@ -190,6 +190,12 @@ body {
     font-size: 1rem;
     text-align: center;
   }
+  .bio-img {
+    width: 320px;
+  }
+  .bio {
+    padding-top: 40px;
+  }
 }
 
 
@@ -376,6 +382,30 @@ audio {
   font-size: 3rem;
   color: #918a7a;
   letter-spacing: 4px;
+}
+
+.fotos-bg ul {
+  list-style: none;
+}
+
+.fotos-bg img {
+  display: block;
+  max-width: 100%;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.slide {
+  display: flex;
+}
+
+.slide li {
+  flex-shrink: 0;
+  width: 80vw;
+  max-width: 800px;
+  margin: 0 20px;
 }
 
 @media (max-width:800px) {
