@@ -10,6 +10,7 @@ html {
 
 body {
   font-family: 'Nunito Sans', sans-serif;
+  position: relative;
 }
 
 /* Header */
@@ -35,7 +36,7 @@ body {
 
 .header ul li {
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 800;
   padding: 1rem;
 }
 
@@ -86,14 +87,25 @@ body {
   .header {
     flex-direction: column;
   }
+  .header ul li {
+    background-color: #fffdf6;
+    padding: 0px 12px;
+    margin-top: 8px;
+    border-radius: 5px;
+  }
+  .header ul li a::after {
+    display: none;
+  }
 }
 
 @media (max-width:520px) {
   .header ul li {
-    padding: .5rem;
+    padding: 0px 12px 2px 12px;
+    margin-top: 16px;
   }
   .header ul li a {
     font-size: 1.2rem;
+    letter-spacing: 1px;
   }
   .logo {
     font-size: 3.6rem;
@@ -131,13 +143,13 @@ body {
   max-width: 36ch;
   font-size: 1.4rem;
   color: #58554a;
-  animation: show-left 1s forwards;
+  animation: show-left 1.5s forwards;
 }
 
 @keyframes show-left {
   from {
     opacity: 0;
-    transform: translate3d(60px, 0, 0);
+    transform: translate3d(100px, 0, 0);
   }
   to {
     opacity: 1;
@@ -148,7 +160,7 @@ body {
 @keyframes show-right {
   from {
     opacity: 0;
-    transform: translate3d(-60px, 0, 0);
+    transform: translate3d(-100px, 0, 0);
   }
   to {
     opacity: 1;
@@ -175,20 +187,22 @@ body {
   .bio-text {
     font-size: 1.3rem;
     max-width: 40ch;
+    text-align: center;
   }
 }
 
 @media (max-width:520px) {
   .bio-text {
     font-size: 1.140rem;
-    text-align: center;
   }
 }
 
 @media (max-width:440px) {
   .bio-text {
-    font-size: 1rem;
+    font-size: .99rem;
     text-align: center;
+    padding-left: 4px;
+    padding-right: 4px;
   }
   .bio-img {
     width: 320px;
@@ -274,9 +288,18 @@ audio {
   }
 }
 
-@media (max-width:480px) {
+@media (max-width:520px) {
   .music {
-    gap: 40px;
+    gap: 32px;
+  }
+  .music img {
+    width: 168px;
+  }
+  audio {
+    width: 168px;
+  }
+  .music h3 {
+    font-size: .98rem;
   }
 }
 
@@ -371,7 +394,7 @@ audio {
   background: #F4F0E5;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40px;
   padding-top: 80px;
   padding-bottom: 160px;
 }
@@ -382,6 +405,7 @@ audio {
   font-size: 3rem;
   color: #918a7a;
   letter-spacing: 4px;
+  padding-bottom: 28px;
 }
 
 .fotos-bg ul {
@@ -401,16 +425,116 @@ audio {
   display: flex;
 }
 
+.slide:hover {
+  will-change: transform;
+}
+
 .slide li {
   flex-shrink: 0;
   width: 80vw;
   max-width: 800px;
   margin: 0 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 2px 4px 4px rgba(0,0,0,.4);
+  opacity: .8;
+  transform: scale(.9);
+  transition: .4s;
+}
+
+.slide li.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+[data-control="slide"] {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+[data-control="slide"] li a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #918a7a;
+  border-radius: 50%;
+  overflow: hidden;
+  text-indent: -999px;
+  margin: 5px;
+}
+
+[data-control="slide"] li.active a,
+[data-control="slide"] li a:hover {
+  background: #525a7a;
+}
+
+.custom-controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.custom-controls li {
+  opacity: .8;
+  transform: scale(.8);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2px;
+  box-shadow: 0 2px 2px rgba(0,0,0,.5);
+  cursor: pointer;
+  transition: .3s;
+}
+
+.custom-controls li.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.arrow-nav {
+  display: none;
 }
 
 @media (max-width:800px) {
   .fotos-bg {
     padding-top: 60px;
     padding-bottom: 80px;
+  }
+  .custom-controls li {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width:450px) {
+  .fotos-bg {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+  .custom-controls li {
+    width: 40px;
+    height: 40px;
+  }
+  .fotos-bg h2 {
+    padding-bottom: 8px;
+  }
+}
+
+.back-top img {
+  width: 50px;
+  height: 25px;
+  bottom: 12px;
+  right: 12px;
+  position: fixed;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width:520px) {
+  .back-top img {
+    width: 30px;
+    height: 15px;
   }
 }

@@ -1,6 +1,18 @@
-import Slide from './slide.js'
+import { SlideNav } from './slide.js';
 
-const slide = new Slide('.slide', '.wrapper')
+const slide = new SlideNav('.slide', '.wrapper')
 slide.init()
+slide.addArrow('.prev', '.next')
 
-console.log(slide)
+slide.addControl('.custom-controls')
+
+function showButton() {
+  if(window.scrollY <= 150) {
+     document.querySelector('.back-top img').style.display = 'none';
+  } else {
+     document.querySelector('.back-top img').style.display = 'block';
+  }
+}
+
+window.addEventListener('scroll', showButton);
+document.querySelector('.back-top img').addEventListener('click', slide.subirTela)
