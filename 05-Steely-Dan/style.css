@@ -11,6 +11,7 @@ html {
 body {
   font-family: 'Nunito Sans', sans-serif;
   position: relative;
+  background-color: #fffdf6;
 }
 
 /* Header */
@@ -136,7 +137,7 @@ body {
   width: 100%;
   border-radius: 5px;
   box-shadow: 2px 2px 8px #615e52;
-  animation: show-right 1s forwards;
+  animation: show-right 1.5s forwards;
 }
 
 .bio-text {
@@ -149,7 +150,7 @@ body {
 @keyframes show-left {
   from {
     opacity: 0;
-    transform: translate3d(100px, 0, 0);
+    transform: translate3d(120px, 0, 0);
   }
   to {
     opacity: 1;
@@ -160,7 +161,7 @@ body {
 @keyframes show-right {
   from {
     opacity: 0;
-    transform: translate3d(-100px, 0, 0);
+    transform: translate3d(-120px, 0, 0);
   }
   to {
     opacity: 1;
@@ -537,4 +538,15 @@ audio {
     width: 30px;
     height: 15px;
   }
+}
+
+.js-scroll {
+  opacity: 0;
+  transform: translate3d(40px, 0, 0);
+  transition: .4s;
+}
+
+.js-scroll.anima-ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
